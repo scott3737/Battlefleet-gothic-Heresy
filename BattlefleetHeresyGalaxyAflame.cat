@@ -5,6 +5,27 @@
     <categoryEntry name="Heavy Escort" id="f448-d70a-49e6-0c2f" hidden="false"/>
     <categoryEntry name="Rite of War" id="ed40-746f-dea1-ece2" hidden="false"/>
     <categoryEntry name="Legion" id="b438-cd3a-a4b7-ac55" hidden="false"/>
+    <categoryEntry name="Torpedoes" id="c41e-159f-a43e-f970" hidden="false"/>
+    <categoryEntry name="Uncommon Prow" id="1bd3-4287-b12b-2644" hidden="false">
+      <constraints>
+        <constraint id="e960-702e-f23a-8867" field="selections" scope="parent" shared="true" type="max" value="0"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Uncommon Prow Configuration" id="8141-b16b-adc3-8148" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="e960-702e-f23a-8867" type="increment" value="1">
+          <conditions>
+            <condition childId="any" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
+          </conditions>
+          <repeats>
+            <repeat childId="5db7-f7cb-e365-4f44" childName="Capital ship" field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1.5"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Capital ship" id="5db7-f7cb-e365-4f44" hidden="false"/>
+    <categoryEntry name="captial" id="42c5-3d71-0550-05c4" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink name="Visigoth (Overlord) Class Battlecruiser" id="6102-8d79-f28c-4f96" collective="false" hidden="false" targetId="cdc2-4c64-0a4d-e4f5" type="selectionEntry"/>
@@ -228,6 +249,9 @@ to its Leadership value at all times (max Ld10).</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">6</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.f748-c77c-9e09-2871" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
     </profile>
     <profile name="Prow Torpedoes (Str 8)" id="60ae-1cf6-2e3c-e3c9" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
       <characteristics>
@@ -235,6 +259,9 @@ to its Leadership value at all times (max Ld10).</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">8</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.f748-c77c-9e09-2871" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
     </profile>
     <profile name="Prow Torpedoes (Str 9)" id="48ee-f715-eaa8-0707" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
       <characteristics>
@@ -242,6 +269,9 @@ to its Leadership value at all times (max Ld10).</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">9</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.58c5-cb84-11ed-1e4c" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
     </profile>
     <profile name="Prow Torpedoes (Str 1)" id="d375-89bf-d350-ccf9" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
       <characteristics>
@@ -249,6 +279,9 @@ to its Leadership value at all times (max Ld10).</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">1</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.55a0-74b4-7742-4f4b" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
     </profile>
     <profile name="Prow Torpedoes (Str 4)" id="f7eb-1fd3-4faf-61f5" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
       <characteristics>
@@ -256,12 +289,59 @@ to its Leadership value at all times (max Ld10).</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.55a0-74b4-7742-4f4b" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
     </profile>
     <profile name="Prow Torpedoes (Str 2)" id="530f-8aab-6443-0700" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
       <characteristics>
         <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
         <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
         <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier affects="self.entries.55a0-74b4-7742-4f4b" field="hidden" scope="root-entry" type="set" value="false"/>
+      </modifiers>
+    </profile>
+    <profile name="Port Launch Bays (3)" id="f190-0249-3a58-65db" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+      <characteristics>
+        <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+        <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
+        <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Stbd Launch Bays (3)" id="5f9a-3a87-2fa3-624d" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+      <characteristics>
+        <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+        <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
+        <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Port Launch Bays (2)" id="8d34-98f1-a878-4449" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+      <characteristics>
+        <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+        <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+        <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Stbd Launch Bays (2)" id="f808-8028-5928-063e" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+      <characteristics>
+        <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+        <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+        <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Uncommon Prow configuration" id="621f-1d85-8af1-bd25" hidden="false" typeId="5a49-6569-78e9-a35c" typeName="Special Rule">
+      <characteristics>
+        <characteristic name="Effects" typeId="fe13-6bab-c5cb-4f1d"/>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -458,6 +538,10 @@ Once they complete their attack, they are removed normally</description>
     <rule name="Boarding Torpedoes" id="0ceb-108a-4241-00fb" hidden="false">
       <description>Boarding torpedoes are launched like ordinary torpedoes and ships that can carry them are noted in the fleet lists. It is not possible to launch ordinary torpedoes and boarding torpedoes from a ship in the same turn. Unlike ordinary torpedoes, boarding torpedoes can make a single 45° turn at the start of every Ordnance Phase, measured from the centre of the marker. They cannot turn 45° in the same turn they are launched. They may elect to ignore hulks. If boarding torpedoes move into contact with a ship’s base, they attack just like ordinary torpedoes (roll for turrets and to hit). Each one that hits makes a Hit-and-Run attack in the Ordnance Phase rather than inflicting a point of damage. Hit-and-Run attacks are discussed in the End Phase section. When boarding torpedoes come in contact with any other torpedoes except other friendly boarding torpedoes, they will be removed as normal. Boarding torpedoes do not attack friendly ships (including hulks) they come in contact with, nor are they removed by friendly fighters in contact.</description>
     </rule>
+    <rule name="Extremis Weapons" id="eee8-33ca-bf1c-1117" hidden="false">
+      <description>Nova Cannons, Firedrake Cannons, and Planet Scourers are all considered to be Extremis Weapons. You may take one of each type of Extremis Weapon (if the vessels within your fl eet possess the options to do so) as well as one additional Extremis weapon for every 1000 points (or part there-of) in your fl eet.
+(e.g.: Sam is building his fl eet list and the ships he chooses include two ships which between them are armed with one Nova Cannon and one Plasma Scourer. Because he and his opponent agreed to play a 1500 point game he can choose to include one additional ship armed with a Nova Cannon or Plasma Scourer.)</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry name="Shark Assault Boats" id="15f0-cae3-711f-302d" collective="false" hidden="false" import="true" type="upgrade">
@@ -482,6 +566,9 @@ Once they complete their attack, they are removed normally</description>
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Marks of chaos" id="9c6e-0865-2e38-b70c" hidden="false" import="true" targetId="5cd4-ff89-fd0f-f2c7" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifiers>
         <modifier field="cdd8-ec45-bbb0-8b82" scope="parent" type="set" value="1">
           <conditions>
@@ -489,11 +576,32 @@ Once they complete their attack, they are removed normally</description>
           </conditions>
         </modifier>
       </modifiers>
-      <rules>
-        <rule name="Praetor (Ld 10)" id="9080-dc3b-9e3d-fba7" hidden="false">
-          <description>A Praetor comes with two fleet commander re-rolls and has the Master of the Legion special rule.</description>
-        </rule>
-      </rules>
+      <profiles>
+        <profile name="Praetor" id="d18d-9edd-508f-9fde" hidden="false" typeId="436f6d6d616e64657223232344415441232323" typeName="Commander">
+          <characteristics>
+            <characteristic name="Leadership" typeId="4c65616465727368697023232344415441232323">10</characteristic>
+            <characteristic name="Re-rolls" typeId="52652d726f6c6c7323232344415441232323">2</characteristic>
+            <characteristic name="Pg." typeId="50672e23232344415441232323"/>
+          </characteristics>
+          <modifiers>
+            <modifier field="52652d726f6c6c7323232344415441232323" type="cumulative-add" value="1">
+              <conditions>
+                <condition childId="2df2-a23c-fd59-3693" childName="Additional Reroll" field="selections" scope="16f4-6f39-b7e4-90ed" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="52652d726f6c6c7323232344415441232323" type="cumulative-add" value="2">
+              <conditions>
+                <condition childId="2df2-a23c-fd59-3693" childName="Additional Reroll" field="selections" scope="16f4-6f39-b7e4-90ed" shared="true" type="equalTo" value="2"/>
+              </conditions>
+            </modifier>
+            <modifier field="52652d726f6c6c7323232344415441232323" type="cumulative-add" value="-1">
+              <conditions>
+                <condition childId="9c6e-0865-2e38-b70c" childName="Marks of chaos" field="selections" scope="16f4-6f39-b7e4-90ed" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
       <selectionEntries>
         <selectionEntry name="Additional Reroll" id="2df2-a23c-fd59-3693" hidden="false" import="true" type="upgrade">
           <constraints>
@@ -516,6 +624,30 @@ Once they complete their attack, they are removed normally</description>
       <costs>
         <cost name="pts" typeId="points" value="25"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Marks of chaos" id="cf9e-aff6-517d-02b7" hidden="false" import="true" targetId="5cd4-ff89-fd0f-f2c7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Centurion" id="d458-ca23-7e12-f848" hidden="false" typeId="436f6d6d616e64657223232344415441232323" typeName="Commander">
+          <characteristics>
+            <characteristic name="Leadership" typeId="4c65616465727368697023232344415441232323">+1</characteristic>
+            <characteristic name="Re-rolls" typeId="52652d726f6c6c7323232344415441232323">1</characteristic>
+            <characteristic name="Pg." typeId="50672e23232344415441232323"/>
+          </characteristics>
+          <modifiers>
+            <modifier field="52652d726f6c6c7323232344415441232323" type="cumulative-add" value="1">
+              <conditions>
+                <condition childId="0402-4783-3efd-9f59" childName="Additional Reroll" field="selections" scope="0724-1cbf-fdb3-7025" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="52652d726f6c6c7323232344415441232323" type="cumulative-add" value="-1">
+              <conditions>
+                <condition childId="cf9e-aff6-517d-02b7" childName="Marks of chaos" field="selections" scope="0724-1cbf-fdb3-7025" shared="true" type="equalTo" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
       <rules>
         <rule name="Centurions +1 Ld" id="75e4-7bbb-48c5-552c" hidden="false">
           <description>A Centurion comes with one fleet commander re-roll for free and must be embarked on a Legion Vessel of the same parent legion.</description>
@@ -535,6 +667,7 @@ Once they complete their attack, they are removed normally</description>
     <selectionEntry name="Agentha Class Strike Cruiser" id="3409-e297-aa70-b545" hidden="false" import="true" page="143" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="5397-ab69-e229-921d" hidden="false" primary="true" targetId="c3b1-2361-847c-65d0"/>
+        <categoryLink name="Capital ship" id="3f85-94ee-1294-5092" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -693,12 +826,14 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Apocalypse Class Battleship" id="069a-66dd-27c0-69b5" collective="false" hidden="false" import="true" page="96" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="70aa-e777-90ed-3e22" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="8cca-d763-dc8b-73bd" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="4167-2d87-7855-8668" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
       </costs>
       <entryLinks>
-        <entryLink name="Prow weapon" id="0362-6d97-d5ea-94ec" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
+        <entryLink name="Prow weapon (Extremis)" id="0362-6d97-d5ea-94ec" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="b3c4-650b-5964-d14a" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
@@ -742,6 +877,8 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Armiger (Dominator) Class Cruiser" id="53ba-7d08-45d2-90f9" collective="false" hidden="false" import="true" page="130" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="9d77-8935-a434-3d56" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="7857-1bc5-9fb5-9693" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="d550-c867-0c51-7072" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -749,6 +886,7 @@ Annihilators: 20</characteristic>
       <entryLinks>
         <entryLink name="Leadership" id="964f-f0ff-58ab-e57c" hidden="false" import="true" targetId="72b9-2803-264f-57f0" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="4e31-5be0-4adb-75b6" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Prow weapon (Extremis)" id="4a7b-315e-a418-2195" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Uncommon Prow Configuration" id="133d-5b6c-d14f-b7a5" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
@@ -756,12 +894,19 @@ Annihilators: 20</characteristic>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="424a-bb7c-b4ed-70f0" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                <condition childId="4a7b-315e-a418-2195" childName="Prow weapon (Extremis)" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="20">
+          <conditions>
+            <condition childId="4a7b-315e-a418-2195" childName="Prow weapon (Extremis)" field="selections" includeChildForces="false" includeChildSelections="true" scope="d163-a5ee-735b-40b6" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Armiger Profile" id="adc6-90cb-c34a-8bf4" hidden="false" page="160" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -790,23 +935,6 @@ Annihilators: 20</characteristic>
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry name="prow nova cannon" id="424a-bb7c-b4ed-70f0" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="6c85-2072-7525-bb31" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <profiles>
-            <profile name="Prow Nova cannon" id="02dd-c9a0-75bb-6c42" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-              <characteristics>
-                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Range: 30 - 150</characteristic>
-                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">Template</characteristic>
-                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
         <selectionEntry name=" May equip a power ram" id="deca-2766-32ff-d8b0" defaultAmount="0" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="3ef6-c9d7-59ab-6aa2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -824,6 +952,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="de46-755b-8896-f47e" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="888f-2a56-a4e2-84d9" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="6801-59eb-2595-0b2e" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -931,6 +1060,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Battle Barges" id="91df-371a-550a-8d7b" hidden="false" primary="true" targetId="598e-1ce0-5926-6f14"/>
         <categoryLink name="Battleship" id="5db4-8dde-1ef6-a00f" hidden="false" primary="false" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="5e9a-857f-e359-916f" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="385"/>
@@ -938,10 +1068,11 @@ Annihilators: 20</characteristic>
       <entryLinks>
         <entryLink name="Leadership" id="b63d-7ba6-537b-33f6" collective="false" hidden="false" import="true" sortIndex="1" targetId="72b9-2803-264f-57f0" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="57fd-956f-490a-3c85" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="c8ac-c183-777a-a4ae" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="May not use the &quot;come to new heading&quot; special order" id="fa2f-f19e-5390-2324" hidden="false" targetId="b1a1-aead-ea5a-d8d3" type="rule"/>
-        <infoLink name="Prow Torpedoes (Str 6)" id="e839-f6cd-75f9-aab9" hidden="true" targetId="40e8-ec97-22b3-cef2" type="profile">
+        <infoLink name="Boarding Torpedoes" id="6434-3a3d-b95c-69d6" hidden="true" targetId="0ceb-108a-4241-00fb" type="rule">
           <modifiers>
             <modifier field="hidden" type="set" value="false">
               <conditions>
@@ -990,40 +1121,10 @@ Annihilators: 20</characteristic>
               </conditions>
               <modifiers>
                 <modifier field="52616e67652f537065656423232344415441232323" type="set" value="45"/>
-                <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="6"/>
+                <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="4"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
-        </profile>
-        <profile name="Port Launch Bays" id="bbe5-8fa6-31b9-c7e7" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers (Speed: 20) ">
-              <conditions>
-                <condition childId="87ba-093c-9258-a1a4" field="selections" includeChildSelections="false" scope="e577-dc90-d68f-29c4" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="527d-9dbb-db2f-31b7" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers (Speed: 20) ">
-              <conditions>
-                <condition childId="87ba-093c-9258-a1a4" field="selections" includeChildSelections="false" scope="e577-dc90-d68f-29c4" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Prow Launch Bays" id="904e-8b00-2315-f58e" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
@@ -1031,11 +1132,36 @@ Annihilators: 20</characteristic>
             <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
           </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="cd57-fb52-8133-b13b" childName="Thunderhawks" field="selections" includeChildSelections="true" scope="781b-20df-7da1-6329" shared="true" type="atLeast" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="2"/>
+                <modifier field="52616e67652f537065656423232344415441232323" type="set" value="Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="cd57-fb52-8133-b13b" childName="Thunderhawks" field="selections" includeChildSelections="true" scope="781b-20df-7da1-6329" shared="true" type="atLeast" value="1"/>
+                <condition childId="5688-a854-5a28-8fa6" childName="Prow torpedo salvo with boarding torpedoes  (Speed: 30, Strength 6, Front)" field="selections" includeChildSelections="true" scope="781b-20df-7da1-6329" shared="true" type="atLeast" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="1"/>
+                <modifier field="52616e67652f537065656423232344415441232323" type="set" value="Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <modifiers>
             <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers (Speed: 20) ">
+" type="append" value="Torpedo bombers: 20cm ">
               <conditions>
-                <condition childId="87ba-093c-9258-a1a4" field="selections" includeChildSelections="false" scope="e577-dc90-d68f-29c4" shared="true" type="atLeast" value="1"/>
+                <condition childId="4728-44b9-0047-abaa" childName="Add Torpedo bombers" field="selections" includeChildSelections="true" scope="e577-dc90-d68f-29c4" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
             <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="2">
@@ -1045,34 +1171,28 @@ Annihilators: 20</characteristic>
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Prow Torpedoes" id="2843-d6c0-158d-9f3b" hidden="true" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+          <characteristics>
+            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
+            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">6</characteristic>
+            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier field="hidden" type="set" value="false">
+              <conditions>
+                <condition childId="5688-a854-5a28-8fa6" field="selections" includeChildSelections="true" scope="e577-dc90-d68f-29c4" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
       </profiles>
       <rules>
         <rule name="Astartes Only" id="ef29-2956-94c4-80ed" hidden="false"/>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Attack Craft" id="9d30-1e42-998f-66b5" defaultSelectionEntryId="none" hidden="false">
-          <constraints>
-            <constraint id="1009-3058-55b1-9fc6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="May equip its launch bays with torpedo bombers (Speed: 20) for +20 points" id="87ba-093c-9258-a1a4" defaultAmount="0" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <profiles>
-                <profile name="Special Attack Craft" id="927c-f70d-fbb2-bf1b" hidden="false" typeId="5.570677261646523e+33" typeName="Upgrade">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Marauder torpedo bombers (Speed: 20),  in addition to any other attack craft it may normally launch. Basileus class battle barges that take Thunderhawk Gunships cannot purchase this upgrade.</characteristic>
-                    <characteristic name="Pg." typeId="50672e23232344415441232323"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup name="Weapons Refit" id="e693-2e22-38a6-65fa" defaultSelectionEntryId="none" hidden="false">
           <selectionEntries>
-            <selectionEntry name="prow torpedo salvo  (Speed: 30, Strength 6, Front)" id="5688-a854-5a28-8fa6" defaultAmount="0" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Prow torpedo salvo with boarding torpedoes  (Speed: 30, Strength 6, Front)" id="5688-a854-5a28-8fa6" defaultAmount="0" hidden="false" import="true" type="upgrade">
               <constraints>
                 <constraint id="d83f-8b53-a4f2-1bdb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
@@ -1094,6 +1214,7 @@ Annihilators: 20</characteristic>
         <categoryLink name="Assault Cruiser" id="94ec-dc5d-0db4-d5e3" hidden="false" primary="true" targetId="9008-7984-0773-6f06"/>
         <categoryLink name="Cruiser" id="8db0-0614-aee3-af50" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Heavy Cruiser" id="3887-9335-e82c-bf09" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="417c-c50f-71ca-1e8d" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
@@ -1163,6 +1284,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Heavy Cruiser" id="fac9-abfb-07c7-2f0e" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Cruiser" id="1f79-a021-ce8e-067c" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="042e-22aa-e7c2-32c3" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -1216,6 +1338,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Heavy Cruiser" id="209d-b7c4-8e47-bed7" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Cruiser" id="e244-4c94-088c-e7fe" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="e11f-4c98-197f-9bd7" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
@@ -1308,6 +1431,7 @@ this upgrade.</characteristic>
     <selectionEntry name="Champion (Carnage) Class Cruiser" id="ab11-54b5-14ef-0d8e" collective="false" hidden="false" import="true" page="125" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="6eb4-8eef-6fb6-594d" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="baae-ba08-92cb-0e0a" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -1436,6 +1560,7 @@ points.</description>
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="fb8b-9c44-31da-4132" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="634a-293c-4f11-f49b" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="337e-3f3e-4a84-a285" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="225"/>
@@ -1444,8 +1569,23 @@ points.</description>
         <entryLink name="Upgrades" id="a1d8-8dda-74fc-6769" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Prow Torpedoes" id="7cc2-cf19-ce64-c4e8" hidden="false" targetId="1980-be7c-ec67-daf0" type="profile"/>
+        <infoLink name="Prow Torpedoes (Str 6)" id="7cc2-cf19-ce64-c4e8" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="530a-0d5d-3b6f-e92d" childName="Prow weapons" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="20">
+          <conditions>
+            <condition childId="530a-0d5d-3b6f-e92d" childName="Prow weapons" field="selections" includeChildForces="true" includeChildSelections="true" scope="dde6-57cf-7558-883e" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Corinus class" id="0253-5cd0-c214-6f83" hidden="false" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -1543,11 +1683,17 @@ points.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Prow weapons" id="530a-0d5d-3b6f-e92d" hidden="false">
+          <entryLinks>
+            <entryLink name="Prow weapon (Extremis)" id="ca44-14db-9f16-219b" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Covenant (Inferno) Class Cruiser" id="fee7-85b6-d623-4c39" collective="false" hidden="false" import="true" page="126" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="2605-06a2-c0f2-4fa7" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="3323-602b-cc14-f2c3" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -1609,6 +1755,8 @@ points.</description>
         <categoryLink name="Heavy Cruiser" id="58eb-7b1a-92f4-52c2" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Battlecruiser" id="488b-e057-e6d0-bc9b" hidden="false" primary="false" targetId="b041-ef69-0039-d535"/>
         <categoryLink name="Cruiser" id="6683-c6b3-05c0-5a49" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="0c17-5d27-0c9e-7277" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="7ea8-6f53-4018-74c2" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -1708,6 +1856,7 @@ points.</description>
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="26e6-06fd-f8e4-8087" hidden="false" primary="true" targetId="c3b1-2361-847c-65d0"/>
         <categoryLink name="Cruiser" id="ee17-4239-d683-7661" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="bd09-12a9-d4ce-aaf8" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="145"/>
@@ -1789,12 +1938,14 @@ points.</description>
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="1c5f-f881-6b2c-5529" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="0bca-b36e-f6bc-63d2" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="9660-9329-8238-2e0f" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="225"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="da5e-3956-44a4-2f65" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="27ae-f968-6b46-d276" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Prow Torpedoes (Str 6)" id="ac68-072c-4cab-7a79" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile"/>
@@ -1876,6 +2027,7 @@ points.</description>
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="239e-a591-3138-044c" hidden="false" primary="false" targetId="c3b1-2361-847c-65d0"/>
         <categoryLink name="Cruiser" id="ac38-d30f-f5fa-371b" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="3e96-bf3a-1136-bfa7" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -1958,6 +2110,7 @@ points.</description>
     <selectionEntry name="Decurion (Murder) Class Cruiser" id="5c61-b71f-3421-80e4" collective="false" hidden="false" import="true" page="127" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="1c75-2b96-d75f-a056" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="2b5d-5d68-bf82-2a15" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -2052,6 +2205,7 @@ points.</description>
     <selectionEntry name="Desolator Class Battleship" id="4dec-718b-ac42-e9a9" collective="false" hidden="false" import="true" page="97" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="1e5e-64dc-6fc1-2070" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="939d-9260-eea9-c934" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="310"/>
@@ -2186,12 +2340,14 @@ Shark Assault Boards 30</characteristic>
     <selectionEntry name="Devastation Class Cruiser" id="0211-be51-8f12-7c24" collective="false" hidden="false" import="true" page="128" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="b87e-4f32-c3b3-611a" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="a508-2b19-30b1-caec" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="d522-0694-3345-0f79" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="4aa3-4d78-06e3-bf06" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <profiles>
         <profile name="Devastation Profile" id="4e30-e8eb-d905-e899" hidden="false" page="128" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
@@ -2204,40 +2360,6 @@ Shark Assault Boards 30</characteristic>
             <characteristic name="Armour" typeId="41726d6f757223232344415441232323">5+</characteristic>
             <characteristic name="Turrets" typeId="5.475727265747323e+33">3</characteristic>
           </characteristics>
-        </profile>
-        <profile name="Port Launch bays" id="9958-02e0-78d2-a8a0" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20 
-Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="3e4c-6ea1-1b10-12ef" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="0211-be51-8f12-7c24" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch bays" id="624f-8325-cc03-92b2" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20 
-Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="3e4c-6ea1-1b10-12ef" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="0211-be51-8f12-7c24" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Port Lance Battery" id="95ce-1a23-11cd-5e04" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
@@ -2261,29 +2383,11 @@ Shark assault boats: 30</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name="Torpedo Bombers" id="3e4c-6ea1-1b10-12ef" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="2b6c-abd9-1d29-7a3d" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <profiles>
-            <profile name="Torpedo Bombers" id="3877-ef8e-63e2-5fee" hidden="false" typeId="5.570677261646523e+33" typeName="Upgrade">
-              <characteristics>
-                <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">May equip its launch bays with torpedo bombers (Speed: 20) for +20 points, in addition to any other attack craft it may 
-normally launch. Devastation class cruisers that take Thunderhawk Gunships cannot purchase this upgrade.</characteristic>
-                <characteristic name="Pg." typeId="50672e23232344415441232323"/>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Dictatus Class Battleship (World Eaters Battle Barge)" id="d330-5a2e-ba2d-9314" collective="false" hidden="false" import="true" page="96" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="a41b-a1f7-fef5-2159" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="eacc-b22c-ad08-3aa1" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -2389,6 +2493,7 @@ normally launch. Devastation class cruisers that take Thunderhawk Gunships canno
       <categoryLinks>
         <categoryLink name="Battle Barges" id="fb54-cf61-a744-ba9a" hidden="false" primary="true" targetId="598e-1ce0-5926-6f14"/>
         <categoryLink name="Battleship" id="df03-c77a-ba09-ed06" hidden="false" primary="false" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="dd29-b555-3ca9-c777" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="405"/>
@@ -2396,6 +2501,7 @@ normally launch. Devastation class cruisers that take Thunderhawk Gunships canno
       <entryLinks>
         <entryLink name="Leadership" id="0291-b410-b150-3f4c" collective="false" hidden="false" import="true" sortIndex="1" targetId="72b9-2803-264f-57f0" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="4f31-8d5a-edb6-c987" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="67c2-851b-5f1c-8e28" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Ponderous" id="aab3-26b0-d329-7294" hidden="false" targetId="eaf7-6a53-3591-9f77" type="rule"/>
@@ -2413,44 +2519,29 @@ normally launch. Devastation class cruisers that take Thunderhawk Gunships canno
             <characteristic name="Turrets" typeId="5.475727265747323e+33">4</characteristic>
           </characteristics>
         </profile>
-        <profile name="Port Launch Bays" id="ed06-0c1e-2687-7ba3" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="9b96-46ac-919a-eed9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="23a8-f55d-b8a2-bd37" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="90f5-5331-ca50-9c1b" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="9b96-46ac-919a-eed9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="23a8-f55d-b8a2-bd37" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Prow Launch Bays" id="a8d0-1de1-1b0c-dabc" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
             <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
           </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="cd57-fb52-8133-b13b" childName="Thunderhawks" field="selections" includeChildSelections="true" scope="b8d9-8d4a-2dbd-2a12" shared="true" type="atLeast" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="2"/>
+                <modifier field="52616e67652f537065656423232344415441232323" type="set" value="Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <modifiers>
             <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20">
               <conditions>
-                <condition childId="9b96-46ac-919a-eed9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="23a8-f55d-b8a2-bd37" shared="true" type="atLeast" value="1"/>
+                <condition childId="4728-44b9-0047-abaa" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="23a8-f55d-b8a2-bd37" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2558,11 +2649,25 @@ normally launch. Devastation class cruisers that take Thunderhawk Gunships canno
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Boarding Torpedoes" id="f887-7673-3fa9-dd7c" hidden="false" targetId="0ceb-108a-4241-00fb" type="rule"/>
+              </infoLinks>
               <profiles>
                 <profile name="Prow Torpedo Tubes" id="804e-a4ac-5d61-f9db" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
                   <characteristics>
                     <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
                     <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">8</characteristic>
+                    <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Prow Fusion Cannon" id="a22f-b4a4-4cdb-7189" hidden="false" import="true" type="upgrade">
+              <profiles>
+                <profile name="Prow Fusion Cannon" id="b6b5-c2b7-47c1-11d9" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+                  <characteristics>
+                    <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
+                    <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
                     <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
                   </characteristics>
                 </profile>
@@ -2603,27 +2708,6 @@ normally launch. Devastation class cruisers that take Thunderhawk Gunships canno
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Attack Craft" id="cce7-e775-47c5-bab5" defaultSelectionEntryId="none" hidden="false">
-          <selectionEntries>
-            <selectionEntry name="Special Attack Craft" id="9b96-46ac-919a-eed9" defaultAmount="0" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="a7fe-1beb-b5c5-9a06" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <profiles>
-                <profile name="Special Attack Craft" id="b443-34a5-cf9b-b138" hidden="false" typeId="5.570677261646523e+33" typeName="Upgrade">
-                  <characteristics>
-                    <characteristic name="Description" typeId="4465736372697074696f6e23232344415441232323">Marauder torpedo bombers (Speed: 20), Dominus class battle barges that take Thunderhawk
-gunships cannot purchase this upgrade</characteristic>
-                    <characteristic name="Pg." typeId="50672e23232344415441232323"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Eclipse (Mars) Class Battlecruiser" id="0344-f4e8-74ba-541f" collective="false" hidden="false" import="true" page="116" publicationId="177f-36f7-517e-af3f" type="unit">
@@ -2631,12 +2715,16 @@ gunships cannot purchase this upgrade</characteristic>
         <categoryLink name="Heavy Cruiser" id="3493-a282-faa4-cb34" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Battlecruiser" id="a8bb-077d-b8f5-7bd6" hidden="false" primary="false" targetId="b041-ef69-0039-d535"/>
         <categoryLink name="Cruiser" id="447e-9a18-74bb-fb7a" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="932e-a691-144c-a0c0" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="9ae6-71df-cbbd-61c3" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="c1e8-bf34-4058-86fb" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="6102-3836-ed32-319f" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
+        <entryLink name="Prow weapon (Extremis)" id="1d3a-159b-9012-dc45" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
       </entryLinks>
       <profiles>
         <profile name="Eclipse Profile" id="1abc-6811-c4c8-4629" hidden="false" page="116" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
@@ -2671,45 +2759,6 @@ gunships cannot purchase this upgrade</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Left / Front / Right</characteristic>
           </characteristics>
         </profile>
-        <profile name="Port Launch Bays" id="1a7e-9785-297b-9dca" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers: 20 ">
-              <conditions>
-                <condition childId="96b1-1ca2-5838-96fe" field="selections" includeChildSelections="true" scope="0344-f4e8-74ba-541f" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="7ff8-cb0e-a2a9-d923" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers: 20 ">
-              <conditions>
-                <condition childId="96b1-1ca2-5838-96fe" field="selections" includeChildSelections="true" scope="0344-f4e8-74ba-541f" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Prow Nova Cannon" id="3dbf-2899-ad26-2fd4" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30-150</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">Template</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <selectionEntries>
         <selectionEntry name="Extra Turrets" id="7c5d-ebe8-f8a7-826b" hidden="false" import="true" type="upgrade">
@@ -2734,19 +2783,12 @@ Starhawk Bombers: 20</characteristic>
             <infoLink name="Targeting Matrix" id="2b79-d63c-6bea-f346" hidden="false" targetId="52d5-b11d-923d-ed5c" type="rule"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry name="May equip its launch bays with torpedo bombers (Speed: 20) for +20 points, in addition to any other attack craft it may  normally launch. Mars class battlecruisers that take Thunderhawk Gunships cannot purchase this upgrade. " id="96b1-1ca2-5838-96fe" defaultAmount="0" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="ca53-63eb-fb00-284b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Emperor Class Battleship" id="debc-ad62-63ba-042b" collective="false" hidden="false" import="true" page="97" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="f005-40ac-8e6b-93da" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="9cda-a174-a87d-a7bf" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="370"/>
@@ -2754,6 +2796,7 @@ Starhawk Bombers: 20</characteristic>
       <entryLinks>
         <entryLink name="Leadership" id="d58b-9ae0-e9ff-3075" collective="false" hidden="false" import="true" targetId="72b9-2803-264f-57f0" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="f01c-292e-3db4-7cc2" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (4)" id="23bc-a6f0-d5cc-04f6" hidden="false" import="true" targetId="43b7-4ef6-4dcf-602e" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Ponderous" id="7db5-335a-f473-3294" hidden="false" targetId="eaf7-6a53-3591-9f77" type="rule"/>
@@ -2792,38 +2835,6 @@ Starhawk Bombers: 20</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
           </characteristics>
         </profile>
-        <profile name="Port Launch Bays" id="a479-9b19-ded8-9c3e" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Furies Fighters: 30
-Starhawks Bombers: 20
-Sharks assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
-              <conditions>
-                <condition childId="2e83-e8f5-ec21-224a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="debc-ad62-63ba-042b" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="5a0c-f63d-0be1-d45f" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Furies Fighters: 30
-Starhawks Bombers: 20
-Sharks assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
-              <conditions>
-                <condition childId="2e83-e8f5-ec21-224a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="debc-ad62-63ba-042b" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Dorsal Weapons Battery" id="b6ed-c444-c5da-7595" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">60</characteristic>
@@ -2839,22 +2850,12 @@ Sharks assault boats: 30</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name="Torpedo Bombers" id="2e83-e8f5-ec21-224a" hidden="false" import="true" type="upgrade">
-          <comment>in addition to any other attack craft it may normally launch. Emperor class battleships that take Thunderhawk Gunships cannot purchase this upgrade.</comment>
-          <constraints>
-            <constraint id="4f4b-0833-32fb-0a6d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Executor Class Grand Cruiser" id="9c44-ab84-3615-569f" collective="false" hidden="false" import="true" page="109" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="12a1-23e2-be87-3765" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="2c91-23d0-37f7-891d" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="3ee8-169e-5837-26bd" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="205"/>
@@ -2970,6 +2971,7 @@ Sharks assault boats: 30</characteristic>
     <selectionEntry name="Goliath Class Macro-Battleship" id="b061-b302-6412-ee1d" collective="false" hidden="false" import="false" page="98" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="336a-2dc8-5f6b-97b5" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="5a50-38e5-712d-80b7" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="395"/>
@@ -3117,6 +3119,8 @@ Sharks assault boats: 30</characteristic>
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="eef5-4cb1-430c-29eb" hidden="false" primary="false" targetId="c3b1-2361-847c-65d0"/>
         <categoryLink name="Cruiser" id="52d6-a57a-0798-ddc1" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="5064-e322-2fa3-5bc9" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="8156-0065-e31d-d6ab" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -3284,6 +3288,8 @@ Sharks assault boats: 30</characteristic>
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="ac05-cf7b-c685-8840" hidden="false" primary="false" targetId="c3b1-2361-847c-65d0"/>
         <categoryLink name="Cruiser" id="ac4d-f727-0e6f-e792" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="4b8e-39db-f895-01a5" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="953d-3ef1-6239-8c03" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -3407,6 +3413,7 @@ Sharks assault boats: 30</characteristic>
     <selectionEntry name="Infernus Class Battleship" id="3ba8-2eef-172a-9a6a" collective="false" hidden="false" import="true" page="99" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="3e6e-849f-5e50-bb9e" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="b321-ed93-c209-b6de" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="285"/>
@@ -3477,8 +3484,7 @@ Sharks assault boats: 30</characteristic>
         <profile name="Prow exo-laser" id="54b6-f273-b5a1-00e2" hidden="true" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">60</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">
-</characteristic>
+            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323"/>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
           </characteristics>
           <modifiers>
@@ -3505,23 +3511,17 @@ Sharks assault boats: 30</characteristic>
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="0898-1b1d-8e52-c037" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="9391-bfb5-82dc-eae9" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="5b15-af9e-78a6-2811" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="14c5-4c26-7519-0c15" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="4773-5664-c206-5282" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Ablative Prow Armor" id="c142-8b51-c80a-4477" hidden="false" targetId="3492-ffe2-8b9a-38b0" type="rule">
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="834b-60b5-ac8b-7b12" field="selections" scope="057a-7a14-3646-b209" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Ablative Prow Armor" id="c142-8b51-c80a-4477" hidden="false" targetId="3492-ffe2-8b9a-38b0" type="rule"/>
       </infoLinks>
       <profiles>
         <profile name="Inflexible Profile" id="6983-4d67-d092-574a" hidden="false" page="112" publicationId="31db-354b-7439-4995" typeId="556e697423232344415441232323" typeName="Unit">
@@ -3563,95 +3563,13 @@ Sharks assault boats: 30</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Right</characteristic>
           </characteristics>
         </profile>
-        <profile name="Port Launch Bays" id="373c-2910-c7ad-823d" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers (Speed: 20) ">
-              <conditions>
-                <condition childId="f75f-3e86-d115-88c9" field="selections" includeChildSelections="false" scope="057a-7a14-3646-b209" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="30a4-851f-07a1-8ba6" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Marauder torpedo bombers (Speed: 20) ">
-              <conditions>
-                <condition childId="f75f-3e86-d115-88c9" field="selections" includeChildSelections="false" scope="057a-7a14-3646-b209" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Prow Torpedoes" id="9f4b-b949-cacb-b9c9" hidden="true" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">6</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier field="hidden" type="set" value="false">
-              <conditions>
-                <condition childId="834b-60b5-ac8b-7b12" field="selections" scope="057a-7a14-3646-b209" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name="May purchase Prow Torpedoes (Speed: 30, Strength 6, Front) for+25 points. However, a Retaliator class grand cruiser  armed with prow torpedoes automatically loses this special rule, as its prow must be reconfigured to accommodate the  torpedo tubes. " id="834b-60b5-ac8b-7b12" defaultAmount="0" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="5113-c319-9a8e-944c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Attack Craft" id="53d2-6172-4d08-41da" defaultSelectionEntryId="none" hidden="false">
-          <constraints>
-            <constraint id="495a-4c75-ca8a-269b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="May equip its launch bays with torpedo bombers (Speed: 20) for +20 points, in addition to any other attack craft it may  normally launch. Inflexible class grand cruisers that take Thunderhawk Gunships cannot purchase this upgrade." id="f75f-3e86-d115-88c9" defaultAmount="0" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Specialist Refits" id="c883-ab7a-f7eb-fe7c" hidden="false">
-          <constraints>
-            <constraint id="e099-a1cc-cf70-18d9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Prow Torpedoes (Speed: 30, Strength 6, Front)" id="254e-3d43-b566-e137" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Prow Torpedoes (Str 6)" id="89e2-5a0a-0659-d26e" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Iterator (Acheron) Class Heavy Cruiser" id="7a6e-b8fd-b6f0-2b90" collective="false" hidden="false" import="true" page="119" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Heavy Cruiser" id="4779-18a3-1d0e-7fa7" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Cruiser" id="9dad-624f-49ee-ec57" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="0189-0ad8-57b2-5994" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
@@ -3705,6 +3623,7 @@ Sharks assault boats: 30</characteristic>
       <categoryLinks>
         <categoryLink name="Battle Barges" id="7977-452e-dae0-6ff5" hidden="false" primary="true" targetId="598e-1ce0-5926-6f14"/>
         <categoryLink name="Battleship" id="5018-f52f-afc9-cd28" hidden="false" primary="false" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="4593-5a39-e76c-2dc9" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="405"/>
@@ -3760,7 +3679,7 @@ Sharks assault boats: 30</characteristic>
         <profile name="Port Bombardment Cannon" id="7fa1-2e62-0375-4a1e" hidden="true" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
+            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">8</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Left</characteristic>
           </characteristics>
           <modifiers>
@@ -3774,7 +3693,7 @@ Sharks assault boats: 30</characteristic>
         <profile name="Starboard Bombardment Cannon" id="5956-1833-efb3-f8c3" hidden="true" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
+            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">8</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Right</characteristic>
           </characteristics>
           <modifiers>
@@ -3816,9 +3735,14 @@ Sharks assault boats: 30</characteristic>
           </characteristics>
           <modifiers>
             <modifier field="46697265706f7765722f53747223232344415441232323" type="set" value="2">
-              <conditions>
-                <condition childId="90bc-87ac-85e2-8dc7" field="selections" scope="cf48-f62e-a4c0-e1a5" shared="true" type="atLeast" value="1"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="90bc-87ac-85e2-8dc7" field="selections" scope="cf48-f62e-a4c0-e1a5" shared="true" type="atLeast" value="1"/>
+                    <condition childId="5aae-9979-b0d2-617f" childName=" May exchange its port and starboard weapons batteries for port and starboard bombardment cannons (Range: 30,  Firepower 8, Left / Right) for free. Due to the rarity of this refit no more than one of this variant may be used in a fleet." field="selections" scope="4922-b80e-e6de-6daa" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </profile>
@@ -3840,6 +3764,9 @@ Sharks assault boats: 30</characteristic>
           <constraints>
             <constraint id="3e02-ab8b-1d1c-873e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3854,25 +3781,34 @@ Sharks assault boats: 30</characteristic>
     <selectionEntry name="Lunar Class Cruiser" id="b095-76b9-37e9-d3b4" collective="false" hidden="false" import="true" page="131" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="285f-20c1-de31-fa44" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="1121-bcd7-a5df-a145" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="4953-02a9-00f5-39f8" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="fadd-4a1d-28ee-aa0a" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Prow weapon (Extremis)" id="068c-6ae3-76fd-284b" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Uncommon Prow Configuration" id="e8f6-48e0-9aa0-5176" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
         <infoLink name="Prow Torpedoes (Str 6)" id="eddb-2886-31a7-0db1" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile">
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="41b7-3aba-30d3-4c66" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                <condition childId="068c-6ae3-76fd-284b" childName="Prow weapon (Extremis)" field="selections" includeChildForces="false" includeChildSelections="true" scope="2469-3588-251b-15bd" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="20">
+          <conditions>
+            <condition childId="068c-6ae3-76fd-284b" childName="Prow weapon (Extremis)" field="selections" includeChildForces="false" includeChildSelections="true" scope="2469-3588-251b-15bd" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Lunar Profile" id="58c1-b4a9-8eeb-6802" hidden="false" page="131" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -3915,23 +3851,6 @@ Sharks assault boats: 30</characteristic>
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry name="prow nova cannon" id="41b7-3aba-30d3-4c66" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="eb35-1b35-8208-391c" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <profiles>
-            <profile name="Prow Nova cannon" id="41aa-41a4-19ab-6949" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-              <characteristics>
-                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Range: 30 - 150</characteristic>
-                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">Template</characteristic>
-                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Front</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
         <selectionEntry name=" May equip a power ram" id="9e96-4694-a424-099c" defaultAmount="0" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="38c5-12a9-393d-2d53" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3949,12 +3868,14 @@ Sharks assault boats: 30</characteristic>
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="5d35-75f4-ab8c-1f7a" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="d314-d3bf-1f45-9151" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="aae9-527b-19d6-e5fd" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="235"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="655d-19f8-3c94-6531" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="0b96-ba36-71fd-1a2f" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Ablative Prow Armor" id="49fb-d781-66ee-8c87" hidden="false" targetId="3492-ffe2-8b9a-38b0" type="rule">
@@ -3979,34 +3900,6 @@ Sharks assault boats: 30</characteristic>
             <characteristic name="Turrets" typeId="5.475727265747323e+33">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Port Launch Bays" id="bd93-ecc2-cfb3-29e4" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="torpedo bombers:20">
-              <conditions>
-                <condition childId="715a-366b-79f5-656a" field="selections" scope="5b29-9867-ebda-dab7" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="cd30-03b0-d5f7-0cfa" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 Starhawk Bombers: 20 Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" type="append" value="torpedo bombers:20">
-              <conditions>
-                <condition childId="715a-366b-79f5-656a" field="selections" scope="5b29-9867-ebda-dab7" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Port Weapons Battery" id="dffe-edd9-810c-b238" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">45</characteristic>
@@ -4022,16 +3915,6 @@ Sharks assault boats: 30</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name=" May equip its launch bays with torpedo bombers (Speed: 20) for +30 points, in addition to any other attack craft it may  normally launch. Maelstrom class grand cruisers that take Thunderhawk Gunships cannot purchase this upgrade. " id="715a-366b-79f5-656a" defaultAmount="0" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="15e3-28ed-1009-51a4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Specialist Refits" id="e9a3-a2b5-3e93-dea0" hidden="false">
           <constraints>
@@ -4055,6 +3938,7 @@ Sharks assault boats: 30</characteristic>
         <categoryLink name="Assault Cruiser" id="cc5d-313d-98a6-6293" hidden="false" primary="true" targetId="9008-7984-0773-6f06"/>
         <categoryLink name="Cruiser" id="1cc4-af55-9f2e-c4a3" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Heavy Cruiser" id="1d29-6bda-df7b-219f" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="7778-dee1-013b-b827" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -4145,6 +4029,7 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Mercury (Slaughter) Class Cruiser" id="9094-92bd-4d3b-e610" collective="false" hidden="false" import="true" page="132" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="a0a3-04a6-e1cf-ae1b" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="5490-515e-90be-33a6" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="165"/>
@@ -4249,6 +4134,7 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Oberon Class Battleship" id="bb0e-1ef2-6da0-12d3" collective="false" hidden="false" import="true" page="100" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="8021-8752-c7b3-f034" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="5712-6e19-c7a0-4883" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="340"/>
@@ -4256,6 +4142,7 @@ Annihilators: 20</characteristic>
       <entryLinks>
         <entryLink name="Leadership" id="f5e3-7a63-1e37-df2e" collective="false" hidden="false" import="true" targetId="72b9-2803-264f-57f0" type="selectionEntryGroup"/>
         <entryLink name="Upgrades" id="05b3-3da8-3473-1904" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="fddb-78e7-d1d6-c2a0" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Ponderous" id="1f90-08ad-cc3e-d378" hidden="false" targetId="eaf7-6a53-3591-9f77" type="rule"/>
@@ -4272,40 +4159,6 @@ Annihilators: 20</characteristic>
             <characteristic name="Armour" typeId="41726d6f757223232344415441232323">5+</characteristic>
             <characteristic name="Turrets" typeId="5.475727265747323e+33">5</characteristic>
           </characteristics>
-        </profile>
-        <profile name="Port Launch Bays" id="37bd-7212-d77c-eda8" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Furies Fighters: 30
-Starhawks Bombers: 20
-Sharks assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="68da-b8fb-3a6c-d04a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="bb0e-1ef2-6da0-12d3" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="70b2-5238-2201-ec01" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Furies Fighters: 30
-Starhawks Bombers: 20
-Sharks assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2 Squadrons</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="68da-b8fb-3a6c-d04a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="bb0e-1ef2-6da0-12d3" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Port Weapons Battery" id="d09c-7efd-bc9c-f9f5" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
@@ -4350,23 +4203,13 @@ Sharks assault boats: 30</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name="Torpedo bombers" id="68da-b8fb-3a6c-d04a" hidden="false" import="true" type="upgrade">
-          <comment>in addition to any other attack craft it may normally launch. Oberon class battleships that take Thunderhawk Gunships cannot purchase this upgrade.</comment>
-          <constraints>
-            <constraint id="6ecf-8bd4-d5d6-72ac" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Olympia Assault Cruiser" id="9c74-0700-9e07-2ac2" collective="false" hidden="false" import="true" page="122" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Assault Cruiser" id="7c00-08b9-d46c-506f" hidden="false" primary="true" targetId="9008-7984-0773-6f06"/>
         <categoryLink name="Cruiser" id="e55d-f092-d9c7-9467" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Heavy Cruiser" id="4d9f-04aa-4509-d202" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="f5b3-1ae7-e4e5-61e0" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="255"/>
@@ -4460,12 +4303,14 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Onager Class Bombarde" id="94f8-1402-2281-f876" collective="false" hidden="false" import="true" page="133" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="1860-b9a4-5556-b2a9" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="5015-a9cc-ef98-0105" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="f96d-9fce-bc25-0e66" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Prow weapon (Extremis)" id="ca64-171f-d62d-c680" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Ponderous" id="5fe3-c4bc-b992-927d" hidden="false" targetId="eaf7-6a53-3591-9f77" type="rule"/>
@@ -4473,6 +4318,18 @@ Annihilators: 20</characteristic>
         <infoLink name="Uncommon Prow Configuration" id="9069-c240-e8cc-bbd4" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
         <infoLink name="Volatile Cargo" id="1308-a8d0-5bc7-f004" hidden="false" targetId="b419-ad14-2ef0-f39f" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="10">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="1f2f-b277-3271-dedc" childName="Nova cannon" field="selections" includeChildForces="false" includeChildSelections="true" scope="0f0c-bc72-34e3-4193" shared="true" type="atLeast" value="1"/>
+                <condition childId="780f-20c8-02fb-9626" childName="Fire drake" field="selections" includeChildForces="false" includeChildSelections="true" scope="0f0c-bc72-34e3-4193" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Onager Profile" id="e541-00b4-b232-3fa1" hidden="false" page="133" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -4492,13 +4349,6 @@ Annihilators: 20</characteristic>
             <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Left / Front / Right</characteristic>
           </characteristics>
         </profile>
-        <profile name="Prow Plasma Scourer" id="50d1-92e6-3a1a-5a88" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">12</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35">Prow Plasma Scourer</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Integrated refits (autoloader) " id="2112-2e18-1c54-ad9e" hidden="false">
@@ -4509,6 +4359,7 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Pilum Class Strike Cruiser" id="becd-5598-0201-ec46" hidden="false" import="true" page="145" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Strike Cruiser" id="f78c-4624-86e1-9e76" hidden="false" primary="true" targetId="c3b1-2361-847c-65d0"/>
+        <categoryLink name="Capital ship" id="e6b5-a619-f576-78ef" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="135"/>
@@ -4627,6 +4478,7 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Retribution Class Battleship" id="3ee4-68b4-29f3-9157" collective="false" hidden="false" import="true" page="101" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="dc39-ef9e-861b-4e15" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="8e56-82e5-f2e4-ba52" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="345"/>
@@ -4645,6 +4497,7 @@ Annihilators: 20</characteristic>
           </modifiers>
         </infoLink>
         <infoLink name="Prow Torpedoes (Str 9)" id="b683-c51d-3a88-0a25" hidden="false" targetId="48ee-f715-eaa8-0707" type="profile"/>
+        <infoLink name="Uncommon Prow Configuration" id="41d5-5f3a-cf8c-f48b" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
       </infoLinks>
       <profiles>
         <profile name="Retribution Profile" id="943f-d8ac-667a-09df" hidden="false" page="101" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
@@ -4725,6 +4578,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Cruiser" id="148b-ce49-21f4-54f2" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Light Cruiser" id="8749-16c3-fff0-8e4d" hidden="false" primary="false" targetId="dd62-c394-a24a-7306"/>
+        <categoryLink name="Capital ship" id="8592-8e4a-932b-4f1c" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="125"/>
@@ -4768,6 +4622,7 @@ Annihilators: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Cruiser" id="94e9-9f55-26aa-5a1a" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Light Cruiser" id="8ffb-0f43-dd71-f8c0" hidden="false" primary="false" targetId="dd62-c394-a24a-7306"/>
+        <categoryLink name="Capital ship" id="3a16-1461-50b8-fb89" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -4818,6 +4673,7 @@ Annihilators: 20</characteristic>
         <categoryLink name="Assault Cruiser" id="a027-4ae0-8838-9686" hidden="false" primary="true" targetId="9008-7984-0773-6f06"/>
         <categoryLink name="Cruiser" id="ca18-5263-61da-12cc" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Heavy Cruiser" id="41e5-8c70-aee1-830f" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="2502-b502-6eab-1dcd" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
@@ -4964,6 +4820,8 @@ Annihilators: 20</characteristic>
     <selectionEntry name="Tetsujin (Dictator) Class Cruiser" id="3c81-4778-2f1e-c3fd" collective="false" hidden="false" import="true" page="129" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="3576-f406-fb41-7cc7" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="3908-096d-88a0-6fd0" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="2617-2d17-8fa2-70f7" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="215"/>
@@ -4987,38 +4845,6 @@ Annihilators: 20</characteristic>
             <characteristic name="Turrets" typeId="5.475727265747323e+33">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Port Launch bays" id="ad6e-1205-3446-6df5" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">ury Fighters: 30 
-Starhawk Bombers: 20</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="7b7b-57c1-76c5-40aa" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="3c81-4778-2f1e-c3fd" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch bays" id="99b5-58b9-3048-ba02" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">ury Fighters: 30 
-Starhawk Bombers: 20</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="7b7b-57c1-76c5-40aa" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="3c81-4778-2f1e-c3fd" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Port Weapons Battery" id="8121-89eb-b522-c961" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
             <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">30</characteristic>
@@ -5035,14 +4861,6 @@ Starhawk Bombers: 20</characteristic>
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry name=" May equip its launch bays with torpedo bombers (Speed: 20) for +20 points, in addition to any other attack craft it may  normally launch. Dictator class cruisers that take Thunderhawk Gunships cannot purchase this upgrade." id="7b7b-57c1-76c5-40aa" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="61c8-1df2-354f-d870" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry name=" May equip a power ram" id="8c24-75b4-5301-1945" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="7226-f13a-becc-721f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5055,6 +4873,100 @@ Starhawk Bombers: 20</characteristic>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Launch bays (2)" id="2c26-9d41-c556-3ae6" hidden="false">
+          <constraints>
+            <constraint id="b132-836f-4e30-b64c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="760f-ba1b-768a-4f81" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Fury Fighters, Starhawk Bombers" id="5d31-e03f-8943-2029" hidden="false" import="true" type="upgrade">
+              <profiles>
+                <profile name="Port Launch Bays" id="76b6-83e9-ef1e-451d" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+                  <characteristics>
+                    <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm</characteristic>
+                    <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                    <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20">
+                      <conditions>
+                        <condition childId="e8de-6071-919f-9161" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5d31-e03f-8943-2029" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                    <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Assault boats: 30cm">
+                      <conditions>
+                        <condition childId="6c7b-9290-ba48-35f5" childName="Add Assault boats" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5d31-e03f-8943-2029" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+                <profile name="Stbd Launch Bays" id="aa6a-19d1-9bcd-b762" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+                  <characteristics>
+                    <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm</characteristic>
+                    <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                    <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20">
+                      <conditions>
+                        <condition childId="e8de-6071-919f-9161" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5d31-e03f-8943-2029" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                    <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Assault boats: 30cm">
+                      <conditions>
+                        <condition childId="6c7b-9290-ba48-35f5" childName="Add Assault boats" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5d31-e03f-8943-2029" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+              <selectionEntries>
+                <selectionEntry name="Add Torpedo bombers" id="e8de-6071-919f-9161" hidden="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint id="8d0b-ee5f-e561-06a2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry name="Add Assault boats" id="6c7b-9290-ba48-35f5" hidden="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint id="e81a-c9b1-7502-2fbb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+            <selectionEntry name="Thunderhawks" id="4766-4c45-8c34-ffd6" hidden="false" import="true" type="upgrade">
+              <profiles>
+                <profile name="Port Launch Bays" id="6b96-d299-55a0-50ae" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+                  <characteristics>
+                    <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                    <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">1</characteristic>
+                    <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Stbd Launch Bays" id="dfdd-40b9-e012-9468" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+                  <characteristics>
+                    <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                    <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">1</characteristic>
+                    <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Thunderbolt Class Heavy Frigate (dolator Class Raider)  " id="cc82-af8d-e1ed-6f95" hidden="false" import="true" page="151" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
@@ -5116,12 +5028,14 @@ Starhawk Bombers: 20</characteristic>
         <categoryLink name="Heavy Cruiser" id="8005-5d6d-bfec-38ac" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="CV" id="d4eb-1441-6b08-58b7" hidden="false" primary="false" targetId="e0c6-bde4-7055-1e6e"/>
         <categoryLink name="Cruiser" id="2582-d222-0da0-8f62" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="06e9-9ce3-bf0f-1f7b" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="235"/>
       </costs>
       <entryLinks>
         <entryLink name="Upgrades" id="7ff2-96ab-a39a-92c2" hidden="false" import="true" targetId="d350-396e-08cb-08c3" type="selectionEntryGroup"/>
+        <entryLink name="Launch bays (2)" id="b089-c1ae-6cb6-c2bf" hidden="false" import="true" targetId="2158-a56a-2740-9199" type="selectionEntryGroup"/>
       </entryLinks>
       <profiles>
         <profile name="Tribune Profile" id="e810-e2c0-22b0-e6c4" hidden="false" page="110" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
@@ -5134,40 +5048,6 @@ Starhawk Bombers: 20</characteristic>
             <characteristic name="Armour" typeId="41726d6f757223232344415441232323">5+</characteristic>
             <characteristic name="Turrets" typeId="5.475727265747323e+33">3</characteristic>
           </characteristics>
-        </profile>
-        <profile name="Port Launch Bays" id="d3b2-d684-394c-d3bb" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20 
-Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="d46f-5f89-b728-5ca2" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="87bd-4aca-caf8-7a7f" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-        <profile name="Starboard Launch Bays" id="4d76-7ae7-4c26-9e2c" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
-          <characteristics>
-            <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30 
-Starhawk Bombers: 20 
-Shark assault boats: 30</characteristic>
-            <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
-            <characteristic name="Fire Arc" typeId="4.669726520417263e+35"/>
-          </characteristics>
-          <modifiers>
-            <modifier field="52616e67652f537065656423232344415441232323" join="
-" type="append" value="Torpedo Bomber: 20">
-              <conditions>
-                <condition childId="d46f-5f89-b728-5ca2" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="87bd-4aca-caf8-7a7f" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </profile>
         <profile name="Dorsal Lance Battery" id="eace-4137-9e30-cbdb" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
           <characteristics>
@@ -5198,21 +5078,13 @@ Shark assault boats: 30</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntries>
-        <selectionEntry name="May equip its launch bays with torpedo bombers for +20 points, in addition to any other attack craft it may normally  launch. Tribune class heavy cruisers that take Thunderhawk Gunships cannot purchase this upgrade. " id="d46f-5f89-b728-5ca2" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="81e1-2583-c239-55de" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Triton (Defiant)  Assault Barque" id="8d03-f902-269c-b4a7" hidden="false" import="true" page="136" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Light Cruiser" id="8c4e-677c-8c78-1ab6" hidden="false" primary="false" targetId="dd62-c394-a24a-7306"/>
         <categoryLink name="Cruiser" id="7980-1534-872e-a7ff" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="efa8-a2d8-0d69-0634" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="2c75-4c9d-2a30-2d9c" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -5303,6 +5175,7 @@ Starhawk Bombers: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Cruiser" id="ffcb-f68e-7e44-afbb" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Light Cruiser" id="de4e-6549-8719-a956" hidden="false" primary="false" targetId="dd62-c394-a24a-7306"/>
+        <categoryLink name="Capital ship" id="5e0e-19bf-97fd-751f" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -5352,6 +5225,8 @@ Starhawk Bombers: 20</characteristic>
     <selectionEntry name="Uranus (Gothic) Class Cruiser" id="06c2-47d3-df90-2540" collective="false" hidden="false" import="true" page="134" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Cruiser" id="12ae-1b4f-f8a3-6562" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="0ccc-2f42-4e1e-3154" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="8695-960d-5154-4b03" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -5407,6 +5282,8 @@ Starhawk Bombers: 20</characteristic>
     <selectionEntry name="Vanquisher Class Battleship" id="ec3b-975a-beb2-e5bf" collective="false" hidden="false" import="true" page="102" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Battleship" id="f4ff-2735-22d4-e9c2" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="d47a-5723-0ae2-249f" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="cf5c-c80a-7d9c-1afc" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="320"/>
@@ -5419,7 +5296,6 @@ Starhawk Bombers: 20</characteristic>
         <infoLink name="May not use the &quot;come to new heading&quot; special order" id="235b-41d6-625f-d5b7" hidden="false" targetId="b1a1-aead-ea5a-d8d3" type="rule"/>
         <infoLink name="Inferior Thrusters" id="d040-49dc-1989-ca14" hidden="false" targetId="767e-8988-6adf-a877" type="rule"/>
         <infoLink name="Ponderous" id="68fc-782c-5206-c0fe" hidden="false" targetId="eaf7-6a53-3591-9f77" type="rule"/>
-        <infoLink name="Uncommon Prow Configuration" id="296b-48c6-0959-5a2a" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
         <infoLink name="Power Ram" id="a337-943d-404f-059f" hidden="true" targetId="5e84-a2ed-0e60-83a7" type="rule">
           <modifiers>
             <modifier field="hidden" type="set" value="false">
@@ -5429,8 +5305,23 @@ Starhawk Bombers: 20</characteristic>
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Prow Torpedoes (Str 6)" id="afb7-6877-9823-0133" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile"/>
+        <infoLink name="Prow Torpedoes (Str 6)" id="afb7-6877-9823-0133" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="d02e-beb4-379b-b2e9" childName="Prow weapons" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="10">
+          <conditions>
+            <condition childId="d02e-beb4-379b-b2e9" childName="Prow weapons" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Vanquisher Profile" id="9943-12ad-11bb-620a" hidden="false" page="102" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -5515,11 +5406,19 @@ Starhawk Bombers: 20</characteristic>
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Prow weapons" id="d02e-beb4-379b-b2e9" hidden="false">
+          <entryLinks>
+            <entryLink name="Prow weapon (Extremis)" id="64d6-ec1a-158f-a5fb" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Vengeance Class Grand Cruiser" id="08f6-9c9b-8c47-f4b7" collective="false" hidden="false" import="true" page="113" publicationId="177f-36f7-517e-af3f" type="unit">
       <categoryLinks>
         <categoryLink name="Grand Cruiser" id="7776-25d7-d514-f7b9" hidden="false" primary="true" targetId="46e2-c9eb-27e7-172a"/>
         <categoryLink name="Heavy Cruiser" id="84e0-b1b8-0146-f1e0" hidden="false" primary="false" targetId="cf79-82ee-ebe9-7ea3"/>
+        <categoryLink name="Capital ship" id="3a91-decf-8edd-6755" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -5634,6 +5533,7 @@ Starhawk Bombers: 20</characteristic>
       <categoryLinks>
         <categoryLink name="Cruiser" id="7011-be6b-a241-5d05" hidden="false" primary="true" targetId="1042-e458-4e02-a537"/>
         <categoryLink name="Light Cruiser" id="19b3-d452-ce63-129e" hidden="false" primary="false" targetId="dd62-c394-a24a-7306"/>
+        <categoryLink name="Capital ship" id="128f-ed48-3516-9300" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -5686,6 +5586,8 @@ Starhawk Bombers: 20</characteristic>
       <comment>points are listed differently from page to page fleet list page (44) is 345</comment>
       <categoryLinks>
         <categoryLink name="Battleship" id="ad67-5552-5f0d-401d" hidden="false" primary="true" targetId="4361706974616c20536869707323232344415441232323"/>
+        <categoryLink name="Capital ship" id="cf2c-7918-76db-d466" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="2a1e-c331-5dd8-8465" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="325"/>
@@ -5861,6 +5763,8 @@ Starhawk Bombers: 20</characteristic>
         <categoryLink name="Heavy Cruiser" id="2a6e-a34b-e2e3-3224" hidden="false" primary="true" targetId="cf79-82ee-ebe9-7ea3"/>
         <categoryLink name="Battlecruiser" id="2145-c223-596e-f460" hidden="false" primary="false" targetId="b041-ef69-0039-d535"/>
         <categoryLink name="Cruiser" id="13a7-4756-d08a-ae93" hidden="false" primary="false" targetId="1042-e458-4e02-a537"/>
+        <categoryLink name="Capital ship" id="19a1-ca8c-e92b-3396" hidden="false" primary="false" targetId="5db7-f7cb-e365-4f44"/>
+        <categoryLink name="Uncommon Prow" id="99a7-9649-de52-9454" hidden="false" primary="false" targetId="1bd3-4287-b12b-2644"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -5870,8 +5774,23 @@ Starhawk Bombers: 20</characteristic>
       </entryLinks>
       <infoLinks>
         <infoLink name="Uncommon Prow Configuration" id="3e19-4adf-8d24-cc26" hidden="false" targetId="ce2f-2ce9-6657-9e46" type="rule"/>
-        <infoLink name="Prow Torpedoes (Str 6)" id="f5d5-1716-345a-c31a" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile"/>
+        <infoLink name="Prow Torpedoes (Str 6)" id="f5d5-1716-345a-c31a" hidden="false" targetId="40e8-ec97-22b3-cef2" type="profile">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="7183-b394-e477-9f9f" childName="Prow weapons" field="selections" includeChildForces="false" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier field="points" type="cumulative-add" value="20">
+          <conditions>
+            <condition childId="7183-b394-e477-9f9f" childName="Prow weapons" field="selections" includeChildForces="false" includeChildSelections="true" scope="6102-8d79-f28c-4f96" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile name="Visigoth Class Battlecruiser" id="9ad7-96c0-ea09-fba9" hidden="false" page="115" publicationId="177f-36f7-517e-af3f" typeId="556e697423232344415441232323" typeName="Unit">
           <characteristics>
@@ -5941,28 +5860,76 @@ Starhawk Bombers: 20</characteristic>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Prow weapons" id="7183-b394-e477-9f9f" hidden="false">
+          <entryLinks>
+            <entryLink name="Prow weapon (Extremis)" id="eace-3466-fb56-1dfa" hidden="false" import="true" targetId="4e69-0899-0c27-90a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Prow weapon" id="4e69-0899-0c27-90a8" defaultSelectionEntryId="1f2f-b277-3271-dedc" hidden="false">
+    <selectionEntryGroup name="Prow weapon (Extremis)" id="4e69-0899-0c27-90a8" defaultSelectionEntryId="1f2f-b277-3271-dedc" hidden="false">
       <constraints>
-        <constraint id="51f9-61d3-f198-79f9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+        <constraint id="1d45-6adf-5bd5-a2b9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+        <constraint id="a9ae-2c5f-18b9-9317" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="3"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Extremis Weapons" id="1456-7ddc-9b08-a9a2" hidden="false" targetId="eee8-33ca-bf1c-1117" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="a9ae-2c5f-18b9-9317" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry name="Fire drake" id="780f-20c8-02fb-9626" hidden="false" import="true" sortIndex="2" type="upgrade">
+          <constraints>
+            <constraint id="e5da-d012-6a08-770f" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
           <infoLinks>
             <infoLink name="Fire drake" id="39b3-74c7-c3c8-5533" hidden="false" targetId="c2d1-6346-f3e5-8b57" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="e5da-d012-6a08-770f" type="increment" value="1">
+              <repeats>
+                <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Nova cannon" id="1f2f-b277-3271-dedc" hidden="false" import="true" sortIndex="1" type="upgrade">
+          <constraints>
+            <constraint id="5d76-5b22-49b2-32ab" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
           <infoLinks>
             <infoLink name="Prow Nova Cannon" id="26b6-44c6-ffa0-0829" hidden="false" targetId="d16b-5aed-6a39-60a3" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="5d76-5b22-49b2-32ab" type="increment" value="1">
+              <repeats>
+                <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Planet scourer" id="5510-52ad-9bd3-1bdd" hidden="false" import="true" sortIndex="3" type="upgrade">
+          <constraints>
+            <constraint id="92ef-d0aa-563a-3122" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
           <infoLinks>
             <infoLink name="Planet Scourer" id="eec1-5fa1-17a3-dd4d" hidden="false" targetId="ba88-4601-887d-2435" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="92ef-d0aa-563a-3122" type="increment" value="1">
+              <repeats>
+                <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -6027,9 +5994,7 @@ The ship/squadron may perform an additional 45° turn at the end of its movement
 Whenever a vessel with this special rule fi res its weapon batteries and bombardment cannons together, add both weapons’ fi repower together and look up the corresponding number of To-Hit rolls on the gunnery table. The diff erence between this combined number of To-Hit rolls and the Bombardment Cannons&apos; fi repower value are fi rst rolled by the Weapons Batteries, then the remaining To-Hit rolls are rolled by the Bombardment Cannons.</description>
             </rule>
             <rule name="Fury of Olympia" id="fe22-7d9a-103d-eecb" hidden="false">
-              <description>Ordnance markers launched by a vessel with this special rule re-roll To-Crit rolls with a result of &apos;1&apos;. Simply pick up the missed dice and roll them again - the second result stands, even if it is worse.
-
-</description>
+              <description>Ordnance markers launched by a vessel with this special rule re-roll To-Crit rolls with a result of &apos;1&apos;. Simply pick up the missed dice and roll them again - the second result stands, even if it is worse.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -6313,7 +6278,52 @@ As they were operating at minimal power to evade detection the ambushing ships c
                 </rule>
               </rules>
             </selectionEntry>
+            <selectionEntry name="Ursus Claws" id="f616-0daa-f3fe-075a" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="5229-19ec-f88b-d82e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="90b5-e233-5ba4-3538" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Ursus Claws" id="d197-f2a7-8be2-ea4a" hidden="false" targetId="40d7-82be-7f9d-d942" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
           </selectionEntries>
+        </selectionEntry>
+        <selectionEntry name="Add boarding torpedoes" id="55a0-74b4-7742-4f4b" hidden="true" import="true" type="upgrade">
+          <constraints>
+            <constraint id="c929-2e7e-4312-943b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Boarding Torpedoes" id="8fe6-6109-4ea8-8c80" hidden="false" targetId="0ceb-108a-4241-00fb" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry name="Add boarding torpedoes" id="f748-c77c-9e09-2871" hidden="true" import="true" type="upgrade">
+          <constraints>
+            <constraint id="d35f-2ce3-2d1b-c937" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Boarding Torpedoes" id="ef84-4dc7-6716-ae6b" hidden="false" targetId="0ceb-108a-4241-00fb" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry name="Add boarding torpedoes" id="58c5-cb84-11ed-1e4c" hidden="true" import="true" type="upgrade">
+          <constraints>
+            <constraint id="afa5-e637-ce70-a4de" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Boarding Torpedoes" id="b7e9-8986-d205-4f1d" hidden="false" targetId="0ceb-108a-4241-00fb" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -6742,15 +6752,321 @@ Fleet Defence Turrets: Up to two turrets on the ship are exchanged for fl eet de
 5
 Gyro-stabilized Targeting Matrix: Ship weapons are reduced to 75% instead of 50% when on All Ahead Full, Come To New Heading or Burn Retros special orders. Nova Cannons and Plasma Scourers still cannot fi re.
 6
-Augmented Weapon Relays: Weapon batteries shift left on the gunnery table before all other modifi ers are applied. Lance hits count double on rolls of a 6.
-
-</description>
+Augmented Weapon Relays: Weapon batteries shift left on the gunnery table before all other modifi ers are applied. Lance hits count double on rolls of a 6.</description>
                 </rule>
               </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Commander Onboard" id="adec-b94f-ac0d-6426" hidden="true">
+          <selectionEntries>
+            <selectionEntry name="Preator" id="9a05-23ab-8b91-d81c" hidden="true" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3ef0-386e-6af3-653a" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="hidden" type="set" value="false">
+                  <conditions>
+                    <condition childId="28b4-f67c-2b62-f776" childName="Praetor" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Centurion" id="1c9d-4f71-8d24-5008" hidden="true" import="true" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Launch bays (4)" id="43b7-4ef6-4dcf-602e" hidden="false">
+      <constraints>
+        <constraint id="eef0-cd0c-0a27-265c-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="eef0-cd0c-0a27-265c-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry name="Fury Fighters, Starhawk Bombers, Shark assault boats" id="9356-2684-6176-ff7e" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays (4)" id="0fce-5263-5724-c1c9" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
+                  <conditions>
+                    <condition childId="2b16-1cb6-256b-1c18" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="9356-2684-6176-ff7e" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Stbd Launch Bays (4)" id="174c-5ba7-4969-8383" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">4</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
+                  <conditions>
+                    <condition childId="2b16-1cb6-256b-1c18" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="9356-2684-6176-ff7e" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry name="Add Torpedo bombers" id="2b16-1cb6-256b-1c18" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6f74-25ea-8b9d-30bc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry name="Thunderhawks" id="a467-a340-b977-c25b" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays (4)" id="3f33-a19f-1775-ea2a" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Stbd Launch Bays (4)" id="724a-f6fa-2c1e-db41" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Launch bays (2)" id="2158-a56a-2740-9199" hidden="false">
+      <constraints>
+        <constraint id="98e2-2d08-b48b-ad19-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="98e2-2d08-b48b-ad19-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry name="Fury Fighters, Starhawk Bombers, Shark assault boats" id="5fca-b3d8-312d-5353" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays" id="830f-c42e-54db-57a0" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20cm">
+                  <conditions>
+                    <condition childId="4728-44b9-0047-abaa" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5fca-b3d8-312d-5353" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="46697265706f7765722f53747223232344415441232323" type="set"/>
+              </modifiers>
+            </profile>
+            <profile name="Stbd Launch Bays" id="4850-8288-ad46-b494" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20cm">
+                  <conditions>
+                    <condition childId="4728-44b9-0047-abaa" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="5fca-b3d8-312d-5353" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry name="Add Torpedo bombers" id="4728-44b9-0047-abaa" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4ec4-b821-bf5a-b9fd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry name="Thunderhawks" id="cd57-fb52-8133-b13b" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays" id="38c1-4f18-7d76-49d4" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">1</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Stbd Launch Bays" id="d6df-999f-b4fa-142e" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">1</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Launch bays (3)" id="37f9-2ac4-df1f-ccb1" hidden="false">
+      <constraints>
+        <constraint id="1db9-d0b0-7871-5d2b-min" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="1db9-d0b0-7871-5d2b-max" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry name="Fury Fighters, Starhawk Bombers, Shark assault boats" id="d448-9bed-04ed-987f" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays" id="0840-0531-b466-519e" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
+                  <conditions>
+                    <condition childId="7fe4-3180-df90-5b35" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="d448-9bed-04ed-987f" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+            <profile name="Stbd Launch Bays" id="0199-5806-d82a-dc68" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Fury Fighters: 30cm
+Starhawk Bombers: 20cm
+Shark assault boats: 30cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">3</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="52616e67652f537065656423232344415441232323" type="append" value="Torpedo Bomber: 20 (STR 2)">
+                  <conditions>
+                    <condition childId="7fe4-3180-df90-5b35" childName="Add Torpedo bombers" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="d448-9bed-04ed-987f" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry name="Add Torpedo bombers" id="7fe4-3180-df90-5b35" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="56fa-d7f8-73f5-c336" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry name="Thunderhawks" id="0c63-9930-50d3-f48c" hidden="false" import="true" type="upgrade">
+          <profiles>
+            <profile name="Port Launch Bays" id="3e8c-e8af-cf2d-6e1f" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Stbd Launch Bays" id="eaa4-63cd-f416-203d" hidden="false" typeId="41726d616d656e7423232344415441232323" typeName="Armament">
+              <characteristics>
+                <characteristic name="Range/Speed" typeId="52616e67652f537065656423232344415441232323">Thunderhawk
+Gunships: 20cm
+Annihilators: 20cm</characteristic>
+                <characteristic name="Firepower/Str" typeId="46697265706f7765722f53747223232344415441232323">2</characteristic>
+                <characteristic name="Fire Arc" typeId="4.669726520417263e+35">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Marks of chaos" id="5cd4-ff89-fd0f-f2c7" hidden="true">
+      <constraints>
+        <constraint id="b062-7296-2495-6c45" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+        <constraint id="0d97-f577-06e1-0e07" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="c79a-7800-902e-fa2b" childName="III Legion: Emperor’s Children" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="285d-f209-539b-f80a" childName="IV Legion: Iron Warriors" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="895a-5f48-1934-4ebf" childName="VIII Legion: Night Lords" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="7d26-72b3-f499-9f70" childName="XII Legion: World Eaters" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="2777-c660-0c69-7387" childName="XIV Legion: Death Guard" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="59b5-999e-4d1b-fe68" childName="XV Legion: Thousand Sons" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="6e9a-c8ea-9ea4-a1ef" childName="XVI Legion: Sons of Horus" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="ad76-0514-b1fe-e3ff" childName="XVII Legion: Word Bearers" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="9877-39a7-a969-7532" childName="XX Legion: Alpha Legion" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Mark of Khorne" id="81a9-7ba5-feb0-1374" hidden="false" import="true" type="upgrade">
+          <rules>
+            <rule name="Mark of Khorne" id="200d-3aa6-0ca4-678b" hidden="false">
+              <description>The marked vessel doubles its troop value in boarding actions.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Mark of Tzeentch" id="0ec5-d4ff-bfec-1857" hidden="false" import="true" type="upgrade">
+          <rules>
+            <rule name="Mark of Tzeentch" id="c4cb-04ff-b576-a511" hidden="false">
+              <description>Once per turn the marked vessel may re-roll the result of any roll on the Critical Hits table it suff ers or infl icts on an enemy, including the results of hit-and-run raids. The second result stands, even if it is worse.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Mark of Slaanesh" id="71ff-9bf0-e88a-e6a3" hidden="false" import="true" type="upgrade">
+          <rules>
+            <rule name="Mark of Slaanesh" id="f49d-16f0-9a06-192c" hidden="false">
+              <description>All enemy ships and squadrons within 15 cm of the marked vessel suff er a -1 Ld penalty. This is an area eff ect that is not aff ected by line of sight obstructions. Note that this eff ect is not cumulative with multiple marked ships.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Mark of Chaos Undivided" id="f78c-7ddf-d62a-0edf" hidden="false" import="true" type="upgrade">
+          <rules>
+            <rule name="Mark of Chaos Undivided" id="5b30-c634-930d-8a65" hidden="false">
+              <description>Once per game, before a ship takes a leadership test or command check, you may have your entire fl eet use the marked vessel’s leadership value until the end of the turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Mark of Nurgle" id="97f9-697f-22d4-7d08" hidden="false" import="true" type="upgrade">
+          <rules>
+            <rule name="Mark of Nurgle" id="f49f-8ed4-5518-4876" hidden="false">
+              <description>The marked vessel gains 1 additional Hit Point and a +1 bonus when defending against boarding actions.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
